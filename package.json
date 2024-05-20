@@ -1,0 +1,25 @@
+{
+  "name": "svelte-minimal",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Peyton Seigo <pseigo@yahoo.com>",
+  "description": "A minimal Svelte example with TailwindCSS, TypeScript, and ESBuild.",
+  "keywords": [
+    "svelte",
+    "tailwindcss",
+    "typescript",
+    "esbuild"
+  ],
+  "homepage": "https://github.com/pseigo/svelte-minimal#readme",
+  "bugs": {
+    "url": "https://github.com/pseigo/svelte-minimal/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pseigo/svelte-minimal.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
