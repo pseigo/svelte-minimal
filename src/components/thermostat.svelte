@@ -1,22 +1,36 @@
-<div class="thermostat">
-  <h2>Temperature</h2>
-  <div class="temperature">{temperature}{temperature_unit_short}</div>
-  <button on:click={increment}>+</button>
-  <button on:click={decrement}>-</button>
+<div class="p-4 rounded-xl border
+            bg-slate-50 border-slate-100">
+
+  <div class="flex flex-col items-center gap-2">
+    <label for="temperature-value"
+           class="text-xl"
+      >Temperature</label>
+
+    <div id="temperature-value"
+         class="text-6xl font-medium
+                text-blue-500"
+      >{temperature}{temperature_unit_short}</div>
+
+    <div class="flex flex-row items-center gap-2">
+      <TemperatureButton on:click={decrement}>-</TemperatureButton>
+      <TemperatureButton on:click={increment}>+</TemperatureButton>
+    </div>
+
+  </div>
+
 </div>
 
 <style>
-  .thermostat > .temperature {
-    font-size: 4em;
-    font-weight: 700;
-  }
 </style>
 
 <script lang="ts">
-  let bounds = { temperature: { min: 0, max: 40} };
-  export let temperature: number = 0;
+  import TemperatureButton from "./thermostat/temperature_button.svelte";
+
+  export let temperature: number = 17;
+
+  const bounds = { temperature: { min: 0, max: 40} };
   const temperature_step: number = 0.5;
-  let temperature_unit_short = "\u00B0C";
+  const temperature_unit_short = "\u00B0C";
 
   function increment() {
     temperature = Math.min(bounds.temperature.max, temperature + temperature_step);
