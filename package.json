@@ -22,7 +22,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf build",
-    "build": "node scripts/esbuild.js --trace-warnings",
+    "build": "node scripts/esbuild.js --trace-warnings && npx tailwindcss -i src/common/styles/global.css -o ./build/assets/common/styles/global.css",
     "cleanbuild": "npm run clean && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
