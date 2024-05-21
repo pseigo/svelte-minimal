@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Device | IoT Control</title>
+</head>
+
+<body>
+<main>
+  <h1>Device</h1>
+
+  <link rel="stylesheet" href="/assets/components/thermostat.css">
+  <div id="thermostat"></div>
+  <script type="module">
+    "use strict";
+
+    import Thermostat from "/assets/components/thermostat.js";
+
+    document.addEventListener("DOMContentLoaded", () => {
+      new Thermostat({
+        target: document.getElementById("thermostat"),
+        props: { temperature: 20.5 }
+      });
+    });
+  </script>
+
+</main>
+</body>
+</html>
+
