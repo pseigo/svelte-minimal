@@ -1,5 +1,7 @@
+// https://tailwindcss.com/docs/configuration
+
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+const config = {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     extend: {},
@@ -7,3 +9,4 @@ module.exports = {
   plugins: [],
 }
 
+export default config;
