@@ -18,8 +18,12 @@
     "type": "git",
     "url": "git+https://github.com/pseigo/svelte-minimal.git"
   },
+  "type": "module",
   "main": "index.js",
   "scripts": {
+    "clean": "rm -rf build",
+    "build": "node scripts/esbuild.js --trace-warnings",
+    "cleanbuild": "npm run clean && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
